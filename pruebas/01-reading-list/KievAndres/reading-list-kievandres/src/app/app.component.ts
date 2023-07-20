@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import books from '../../../../../01-reading-list/books.json';
+import { Library } from 'src/interfaces/library.interface';
 
 
 @Component({
@@ -10,7 +11,9 @@ import books from '../../../../../01-reading-list/books.json';
 export class AppComponent {
   title = 'reading-list-kievandres';
 
+  public libraryCollection: Library;
+
   constructor () {
-    console.log(books);
+    this.libraryCollection = books;
   }
 }

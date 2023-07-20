@@ -1,1 +1,5 @@
 <h1>Lista de lectura</h1>
+<book
+  *ngFor="let libraryBook of libraryCollection.library"
+  [book]="libraryBook.book">
+</book>

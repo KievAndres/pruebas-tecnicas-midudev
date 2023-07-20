@@ -13,3 +13,7 @@ export interface Book {
   ISBN: string;
   author: BookAuthor;
 }
+
+export interface LibraryBook {
+  book: Book;
+}
