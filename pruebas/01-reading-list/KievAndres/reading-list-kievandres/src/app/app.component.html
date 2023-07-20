@@ -1,5 +1,16 @@
-<h1>Lista de lectura</h1>
-<book
-  *ngFor="let libraryBook of libraryCollection.library"
-  [book]="libraryBook.book">
-</book>
+<div class="reading-list-container">
+  <section class="title">
+    <span class="test-name">01 Reading List</span>
+    <span class="user-name"><a href="https://github.com/KievAndres">Kiev Andres</a></span>
+  </section>
+  <section class="book-list">
+    <book
+    *ngFor="let libraryBook of libraryCollection.library"
+    [book]="libraryBook.book">
+  </book>
+  </section>
+  <section class="reading-list">
+    <header class="reading-list-header">Reading List</header>
+    <div></div>
+  </section>
+</div>

@@ -1,0 +1,43 @@
+.reading-list-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas:
+    "title      title"
+    "book-list  reading-list";
+
+  .title {
+    grid-area: title;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 1em 0;
+
+    .test-name {
+      width: 100%;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .user-name {
+      width: 100%;
+      font-size: 1.8em;
+    }
+  }
+
+  .book-list {
+    grid-area: book-list;
+  }
+
+  .reading-list {
+    grid-area: reading-list;
+    background: #91cdcd;
+
+    &-header {
+      text-align: center;
+      font-size: 1.5em;
+      border-bottom: 1px solid #000;
+      margin: 0 1em;
+      padding: 0.5em 0;
+    }
+  }
+}
