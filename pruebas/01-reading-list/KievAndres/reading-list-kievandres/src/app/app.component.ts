@@ -10,7 +10,7 @@ import { Book } from 'src/interfaces/book.interface';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'reading-list-kievandres';
+  title = 'Reading List - KievAndres';
 
   public bookList: Book[];
   public bookListBackUp: Book[] = [];
