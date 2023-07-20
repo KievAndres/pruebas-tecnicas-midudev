@@ -5,12 +5,19 @@
   </section>
   <section class="book-list">
     <book
-    *ngFor="let libraryBook of libraryCollection.library"
-    [book]="libraryBook.book">
+    *ngFor="let book of bookList"
+    [book]="book"
+    (click)="addToReadingList(book)">
   </book>
   </section>
   <section class="reading-list">
     <header class="reading-list-header">Reading List</header>
-    <div></div>
+    <div class="reading-list">
+      <book
+        *ngFor="let readingBook of readingList"
+        [book]="readingBook"
+        (click)="removeFromReadingList(readingBook)">
+      </book>
+    </div>
   </section>
 </div>
