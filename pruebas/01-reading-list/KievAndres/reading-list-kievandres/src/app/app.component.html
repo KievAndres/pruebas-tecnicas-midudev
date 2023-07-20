@@ -3,6 +3,11 @@
     <span class="test-name">01 Reading List</span>
     <span class="user-name"><a href="https://github.com/KievAndres">Kiev Andres</a></span>
   </section>
+  <section class="filters">
+    <div class="genre-filter">
+      <dropdown [optionList]="genreList" (selectedOption)="filterByGenre($event)"></dropdown>
+    </div>
+  </section>
   <section class="book-list">
     <book
     *ngFor="let book of bookList"

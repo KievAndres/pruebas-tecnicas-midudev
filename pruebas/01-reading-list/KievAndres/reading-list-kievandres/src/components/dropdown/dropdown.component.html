@@ -1,0 +1,11 @@
+<section class="dropdown-container">
+  <span class="selected-value" [ngClass]="{'selected-value-open': isOpen}" (click)="changeIsOpen(!isOpen)">{{selectedValue}}</span>
+  <div *ngIf="isOpen" class="options-list">
+    <span
+      *ngFor="let option of optionList"
+      class="option-item"
+      (click)="updateSelectedValue(option)">
+      {{option}}
+    </span>
+  </div>
+</section>

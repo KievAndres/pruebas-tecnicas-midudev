@@ -3,6 +3,7 @@
   grid-template-columns: 3fr 2fr;
   grid-template-areas:
     "title      title"
+    "filters    filters"
     "book-list  reading-list";
 
   .title {
@@ -21,6 +22,16 @@
     .user-name {
       width: 100%;
       font-size: 1.8em;
+    }
+  }
+
+  .filters {
+    grid-area: filters;
+
+    .genre-filter {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
     }
   }
 

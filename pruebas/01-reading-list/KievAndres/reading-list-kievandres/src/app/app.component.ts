@@ -13,15 +13,27 @@ export class AppComponent {
   title = 'reading-list-kievandres';
 
   public bookList: Book[];
+  public bookListBackUp: Book[] = [];
   public readingList: Book[];
+  public genreList: string[];
 
   constructor () {
     this.bookList = this._getBookList(books);
     this.readingList = [];
+    this.genreList = [];
+    this._getGenreList();
   }
 
   private _getBookList(libraryCollection: Library): Book[] {
     return libraryCollection.library.map(libraryItem => libraryItem.book);
+  }
+
+  private _getGenreList(): void {
+    this.bookList.forEach(bookItem => {
+      if (!this.genreList.includes(bookItem.genre)) {
+        this.genreList.push(bookItem.genre);
+      }
+    })
   }
 
   public addToReadingList(book: Book): void {
@@ -32,5 +44,9 @@ export class AppComponent {
   public removeFromReadingList(book: Book): void {
     this.bookList.push(book);
     this.readingList = this.readingList.filter(bookItem => bookItem.ISBN !== book.ISBN);
+  }
+
+  public filterByGenre(genre: string): void {
+    this.bookListBackUp = [...this.bookList];
   }
 }
